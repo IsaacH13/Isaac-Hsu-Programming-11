@@ -1,2 +1,0 @@
-Charles,14,male
-Rebecca,16,female

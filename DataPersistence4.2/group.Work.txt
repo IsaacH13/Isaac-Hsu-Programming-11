@@ -1,2 +1,0 @@
-Brent,32,male
-Stephanie,21,female
