@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="570.0">
+         <children>
+            <Label text="     Selected Group:    ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="selectedGroupName" text="No Selected Group">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TabPane prefHeight="400.0" prefWidth="587.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Groups">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="386.0" layoutY="1.0" prefHeight="320.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addNewGroup" text="Add New Group">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <HBox alignment="CENTER" prefHeight="10.0" prefWidth="300.0" />
+                              <TextField fx:id="groupName" prefHeight="25.0" prefWidth="144.0" promptText="name of group" />
+                              <HBox prefHeight="30.0" prefWidth="300.0" />
+                              <HBox prefHeight="5.0" prefWidth="300.0" />
+                              <HBox layoutX="10.0" layoutY="227.0" prefHeight="5.0" prefWidth="300.0" />
+                              <Button mnemonicParsing="false" onAction="#loadAllGroups" text="Load All Groups">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <HBox layoutX="10.0" layoutY="193.0" prefHeight="30.0" prefWidth="300.0" />
+                              <Button mnemonicParsing="false" onAction="#selectGroup" text="Select Group">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ListView fx:id="groupList" layoutX="14.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="68.0" layoutY="65.0" text="List of Groups">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="54.0" layoutY="14.0" text="Choose a group form the list of groups and press the Select Group button.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Friends">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="19.0" prefHeight="100.0" prefWidth="216.0">
+                           <children>
+                              <TextField fx:id="friendName" prefHeight="31.0" prefWidth="137.0" promptText="name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="244.0" prefHeight="100.0" prefWidth="134.0">
+                           <children>
+                              <TextField fx:id="friendAge" prefHeight="31.0" prefWidth="75.0" promptText="age">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="389.0" prefHeight="100.0" prefWidth="211.0">
+                           <children>
+                              <TextField fx:id="friendColor" prefHeight="31.0" prefWidth="110.0" promptText="favorite color">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button layoutX="246.0" layoutY="85.0" mnemonicParsing="false" onAction="#createFriend" text="Create Friend">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="174.0" layoutY="145.0" mnemonicParsing="false" onAction="#loadFriends" text="Load Friends From Selected Group File">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="allFriends" layoutX="36.0" layoutY="186.0" prefHeight="100.0" prefWidth="525.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
