@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="DataPersistence4.2:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/DataPersistence4_2_jar</output-path>
-    <root id="archive" name="DataPersistence4.2jar">
-      <element id="module-output" name="DataPersistence4.0" />
-    </root>
-  </artifact>
-</component>
