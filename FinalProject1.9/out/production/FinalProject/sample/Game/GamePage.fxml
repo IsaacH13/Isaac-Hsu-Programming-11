@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4dbcfd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Game.GamePageController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="801.0" style="-fx-background-color: #844218;">
+         <children>
+            <Label fx:id="lblDisplayPlayerName" layoutX="88.0" layoutY="18.0" prefHeight="45.0" prefWidth="569.0" style="-fx-label-padding: 5;" text="player" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="682.0" layoutY="18.0" prefHeight="45.0" prefWidth="82.0" text="Level: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="level" layoutX="764.0" layoutY="18.0" prefHeight="45.0" prefWidth="37.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" style="-fx-label-padding: 5;" text="Player:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox layoutY="520.0" prefHeight="80.0" prefWidth="801.0" style="-fx-background-color: #844218;" />
+      <ImageView fx:id="playerImageView" fitHeight="70.0" fitWidth="70.0" layoutX="367.0" layoutY="530.0">
+         <image>
+            <Image url="@../images/toad.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
